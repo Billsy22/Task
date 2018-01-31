@@ -12,10 +12,8 @@ import CoreData
 extension Task {
     
     // MARK: -  Initializer
-    convenience init(name: String, notes: String = nil, due: Date = nil, context: NSManagedObjectContext = CoreDataStack.context) {
-        self.name = name
-        self.notes = notes
-        self.due = due
+    convenience init(name: String, notes: String? = nil, due: Date? = nil, context: NSManagedObjectContext = CoreDataStack.context) {
         self.init(context: context)
+        self.name = name
     }
 }
